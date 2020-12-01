@@ -1,0 +1,5 @@
+name: Tests scheduled
+
+on:
+  schedule:
+  - cron: "* * * * *"
