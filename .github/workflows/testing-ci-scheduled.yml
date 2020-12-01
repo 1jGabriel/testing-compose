@@ -2,7 +2,8 @@ name: Android CI
 
 on:
   schedule:
-  - cron: "* * * * *"
+    - cron: "* * * * *"
+      
 jobs:
   analysis:
     runs-on: ubuntu-latest
