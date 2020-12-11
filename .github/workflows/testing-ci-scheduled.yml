@@ -17,7 +17,7 @@ jobs:
           fetch-depth: '1'
 
       - name: Bump version and push tag
-        uses: ChloePlanet/github-tag-action@master
+        uses: 1jGabriel/github-tag-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
           WITH_V: true
