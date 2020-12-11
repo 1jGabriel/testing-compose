@@ -12,12 +12,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
-        uses: actions/checkout@relase
+        uses: actions/checkout@master
         with:
           fetch-depth: '1'
 
       - name: Bump version and push tag
-        uses: ChloePlanet/github-tag-action@release
+        uses: ChloePlanet/github-tag-action@master
         env:
           GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
           WITH_V: true
