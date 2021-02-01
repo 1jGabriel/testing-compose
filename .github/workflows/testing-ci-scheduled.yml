@@ -3,7 +3,7 @@ name: Generate tag
 on:
   push:
     branches:
-      - release
+      - master
 
 jobs:
   build:
@@ -11,12 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check out code
-        uses: actions/checkout@master
-        with:
-          fetch-depth: '1'
-
-      - name: Bump version and push tag
-        uses: ChloePlanet/github-tag-action@master
+        uses: peterjgrainger/action-create-branch@v2.0.1
         env:
           GITHUB_TOKEN: ${{ secrets.MY_TOKEN }}
-          WITH_V: true
+        with:
+          branch: 'release-test'
